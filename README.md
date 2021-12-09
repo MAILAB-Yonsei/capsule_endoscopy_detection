@@ -47,8 +47,9 @@ cd ..
 ### STEP0. data root path 지정
 ```
 cd all_codes
+gedit data_path.txt
 ```
-data_path.txt 파일에 data의 절대 경로를 명시한다. (ex. /mnt/data)
+data_path.txt 파일에 data의 절대 경로를 명시한다!!! (ex. /mnt/data)
 
 
 ### STEP1. data_preparation (약 20~30분 소요)
@@ -95,7 +96,7 @@ bash STEP3_inference_cbnet.sh
 conda activate all_except_cbnet.sh
 bash STEP4_ensemble.sh
 ```
-최종 파일은 가장 상위 디렉토리에 'final.csv'로 생성!!
+최종 파일은 가장 상위 디렉토리에 'final.csv'로 생성!!!
 
 ## 주의사항
 #### 모두 순서에 맞게 코드를 구성해놓았기 때문에 하나의 코드를 2번 실행하는 등의 경우 진행에 어려움이 있을 수 있습니다. 참고해주세요.
