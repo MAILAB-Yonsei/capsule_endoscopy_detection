@@ -46,7 +46,7 @@ cd ..
 
 ### STEP0. data root path 지정
 ```
-cd all_codes
+cd all_steps
 gedit data_path.txt
 ```
 data_path.txt 파일에 data의 절대 경로를 명시한다!!! (ex. /mnt/data)
