@@ -98,7 +98,7 @@ bash STEP3_inference_cbnet.sh
   * weight 파일 링크: https://drive.google.com/drive/folders/151KJC3FTUsK5mfx4TtNbhiFuuvLIeGz-?usp=sharing
 ### SETP4. 모든 모델에 대해 앙상블을 진행한다.
 ```
-conda activate all_except_cbnet.sh
+conda activate all_except_cbnet
 bash STEP4_ensemble.sh
 ```
 * 최종 파일은 가장 상위 디렉토리에 'final.csv'로 생성!!!
