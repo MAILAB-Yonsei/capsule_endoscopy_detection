@@ -12,4 +12,4 @@ python python_codes/ensemble_test.py
 # pretrained 된 모델에서 이미 출력해 놓은 11개의 csv 파일에 대해 WBF 앙상블을 수행하여 최종 결과를 저장합니다.
 # 저장 경로는 /final_pretrained.csv 입니다.
 # 위의 final.csv와 final_pretrained.csv가 거의 동일한 것을 확인합니다.
-python python_codes/ensemble_test.py
+python python_codes/ensemble_test_pretrained.py
