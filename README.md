@@ -5,14 +5,14 @@ capsule_endoscopy_detection DACON challenge
 conda, CUDA 미리 세팅
 
 <cbnet을 제외한 나머지에 대한 env>
+```
 conda create -n all_except_cbnet python=3.8
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 pip -r requirements_all_except_cbnet.txt
-
+```
 <cbnet에 대한 env>
-'''
+```
 conda create -n cbnet python=3.8
-'''
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
@@ -24,7 +24,7 @@ pip install git+https://github.com/cocodataset/panopticapi.git
 pip install git+https://github.com/lvis-dataset/lvis-api.git
 pip install albumentations>=0.3.2 --no-binary imgaug,albumentations
 pip install shapely
-
+```
 
 ** main code 실행 ** 
 
