@@ -1,6 +1,11 @@
 # capsule_endoscopy_detection
 capsule_endoscopy_detection DACON challenge
 
+### Overview
+-Yolov5, yolor, 
+--모든 모델은 학습 시 Pretrained Weight을 yolov5 & mmdet github로부터 받아서 사용하였습니다.
+
+
 ## 환경(env) 세팅
 * Ubuntu 18.04, Cuda 11.2
 * Ananconda - Python 3.8
