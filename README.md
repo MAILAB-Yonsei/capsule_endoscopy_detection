@@ -27,7 +27,7 @@ pip -r requirements_all_except_cbnet.txt
 #### cbnet에 대한 env
 ```
 conda create -n cbnet python=3.8
-#### pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
+pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
 cd UniverseNet
 pip install -r requirements/build.txt
@@ -49,28 +49,47 @@ conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
 ```
 STEP2. 각 모델을 학습시킨다.
-```
-bash STEP2로 시작하는 shell 실행 (model9. cbnet 제외하고)
 
-(model9. cbnet 에 대한 shell 실행)
-conda activate cbnet
-bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms
+#### cbnet을 제외한 나머지에 대한 Training
 ```
-STEP3. 모든 모델에 대해 test를 진행한다. (shell 하나당 20~30분 소요)
+conda activate all_except_cbnet
+bash STEP2_train_model1_atss_swin-l_ms.sh
+bash STEP2_train_model2_detectors_cascade_rcnn_r50_ms.sh
+bash STEP2_train_model3_faster_rcnn_swin-l_ms.sh
+bash STEP2_train_model4_retinanet_swin-l.sh
+bash STEP2_train_model5_retinanet_swin-l_ms.sh
+bash STEP2_train_model6_retinanet_swin-t_ms.sh
+bash STEP2_train_model7_cbnet_faster_rcnn_swin-l_ms.sh
+bash STEP2_train_model8_yolor.sh
+```
+#### cbnet에 대한 env
+```
+conda activate cbnet
+bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms.sh
+```
+STEP3. 모든 모델에 대해 Inference를 진행한다. (shell 하나당 20~30분 소요)
+
+#### cbnet을 제외한 나머지에 대한 Inference
 ```
 conda activate all_except_cbnet
 bash STEP3_inference_all_except_cbnet.sh
+```
+#### cbnet에 대한 Inference
+```
 conda activate cbnet
 bash STEP3_inference_cbnet.sh
 ```
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 mmdetection/ckpts 폴더를 mmdetection 폴더 아래에 위치시킨다.
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 UniverseNet/ckpts 폴더를 UniverseNet 폴더 아래에 위치시킨다.
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 YOLO/ckpts 폴더를 YOLO 폴더 아래에 위치시킨다.
+weight 파일 링크: https://drive.google.com/drive/folders/151KJC3FTUsK5mfx4TtNbhiFuuvLIeGz-?usp=sharing
 
 SETP4. 모든 모델에 대해 앙상블을 진행한다.
 ```
+conda activate all_except_cbnet.sh
 bash STEP4_ensemble.sh
 ```
+
 ## 주의사항
 #### 모두 순서에 맞게 코드를 구성해놓았기 때문에 하나의 코드를 2번 실행하는 등의 경우 진행에 어려움이 있을 수 있습니다. 참고해주세요.
 #### 현재 코드는 validation은 진행하지 않게 주석처리했습니다. 원하시면 주석처리를 풀고 val_answer.csv 파일의 경로를 설정해주시면 됩니다.
