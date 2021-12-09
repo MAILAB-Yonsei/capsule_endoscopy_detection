@@ -8,8 +8,9 @@
   * detectors_casacde_rcnn_resnet50_multiscale, retinanet_swin-l, retinanet_swin-l_multiscale, retinanet_swin-t, atss_swin-l_multiscale, faster_rcnn-swin-l_multiscale, yolor_tta_multiscale, yolov5x, yolov5x_tta, yolov5x_tta_multiscale
   * Weighted boxes fusion (WBF) 방식으로 앙상블 진행 (Iou threshold = 0.4)
 ## 환경(env) 세팅
-* Ubuntu 18.04, Cuda 11.2
-* Anaconda - Python 3.8
++ 실험 환경
+ * Ubuntu 18.04, Cuda 11.3
+ * Anaconda - Python 3.8
 
 + git clone
 ```
