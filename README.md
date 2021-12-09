@@ -31,7 +31,7 @@ conda activate cbnet
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
      (ex. pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html)
-cd ../UniverseNet
+cd UniverseNet
 pip install -r requirements/build.txt
 pip install -v -e .  # or "python setup.py develop"
 pip install instaboostfast
@@ -39,6 +39,7 @@ pip install git+https://github.com/cocodataset/panopticapi.git
 pip install git+https://github.com/lvis-dataset/lvis-api.git
 pip install albumentations>=0.3.2 --no-binary imgaug,albumentations
 pip install shapely
+cd ..
 ```
 ## main code 실행
 
