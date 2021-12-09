@@ -10,7 +10,7 @@
 ## 환경(env) 세팅
 + 실험 환경: Ubuntu 18.04, Cuda 11.3, Anaconda - Python 3.8
 
-+ git clone
++ git clone ( + 폴더 권한 설정)
 ```
 git clone https://github.com/MAILAB-Yonsei/capsule_endoscopy_detection.git
 chmod -R 777 capsule_endoscopy_detection
