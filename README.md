@@ -2,9 +2,11 @@
 capsule_endoscopy_detection DACON challenge
 
 ** 환경 세팅 ** 
+
 conda, CUDA 미리 세팅
 
 Ubuntu 18.04, Cuda 11.2
+
 Ananconda - Python 3.8
 
 <cbnet을 제외한 나머지에 대한 env>
