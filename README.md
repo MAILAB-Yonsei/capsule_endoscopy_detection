@@ -28,8 +28,11 @@ pip install albumentations>=0.3.2 --no-binary imgaug,albumentations
 pip install shapely
 ```
 
-** main code 실행 ** 
+## main code 실행
 
+```
+cd all_codes
+```
 STEP1. data_preparation (약 20~30분 소요)
 conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
