@@ -42,7 +42,8 @@ pip install shapely
 conda deactivate
 cd ..
 ```
-## main code 실행 [각 STEP 별로 자세한 설명은 /all_steps 폴더 내의 각각의 .sh 파일을 참고해주세요!]
+## main code 실행
+[각 STEP 별로 자세한 설명은 /all_steps 폴더 내의 각각의 .sh 파일을 참고해주세요!]
 
 ### STEP0. data root path 지정
 ```
