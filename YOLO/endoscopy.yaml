@@ -1,0 +1,2 @@
+{names: [01_ulcer, 02_mass, 04_lymph, 05_bleeding], nc: 4, train: [../../data_yolo/images/train],
+  val: [../../data_yolo/images/valid]}
