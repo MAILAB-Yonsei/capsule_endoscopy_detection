@@ -31,7 +31,7 @@ batch size 및 사용하는 gpu 갯수에 따라 learning rate를 수정해야�
 
 ## Predict 
 ```
-python predict.py --work-dir [5번에서 저장한 work-dir폴더]
+python predict/main.py --model [5번에서 저장한 work-dir폴더]
 
 ex) python predict/main.py --model atss_swin-l_ms
 ```
