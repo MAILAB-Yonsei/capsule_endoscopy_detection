@@ -2,7 +2,7 @@
 
 ### Overview
 
-* Yolov5, Yolor, mmdetection의 모델을 사용
+* Yolov5, Yolor, mmdetection의 모델을 사용 (총 11개 모델 앙상블)
 
   * 모든 모델은 학습 시 Pretrained Weight을 yolov5, yolor, mmdetection 및 swin transformer github로부터 받아서 사용
   * 각 방식에 필요한 형태로 데이터의 format 변경
