@@ -15,7 +15,7 @@
 
 ## 환경(env) 세팅
 * Ubuntu 18.04, Cuda 11.2
-* Ananconda - Python 3.8
+* Anaconda - Python 3.8
 
 #### cbnet을 제외한 나머지에 대한 env
 ```
