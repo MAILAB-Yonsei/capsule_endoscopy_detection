@@ -3,7 +3,7 @@
 # 각 메서드 별로 흩어져 있는 11개의 csv 파일을 하나의 디렉토리로 취합합니다.
 # 취합하는 디렉토리는 /csv_results 입니다.
 # 이미 학습한 모델로 부터 inference한 각 메서드의 결과 csv 파일들은 /csv_results_pretrained 에 위치하여 있습니다.
-python python_codes/gathering_csv.python
+python python_codes/gathering_csv.py
 
 # 모든 STEP1~STEP4 를 거쳐서 출력된 11개의 csv 파일에 대해 WBF 앙상블을 수행하여 최종 결과를 저장합니다.
 # 저장 경로는 /final.csv 입니다.
