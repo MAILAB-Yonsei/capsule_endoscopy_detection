@@ -3,12 +3,11 @@
 1. conda create -n yolo python=3.8
 2. conda activate yolo
 3. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-4. git clone https://github.com/MAILAB-Yonsei/detection.git
-5. cd detection
-6. pip install -r requirements.txt
+4. cd capsule_endoscopy_detection/YOLO
+5. pip install -r requirements.txt
 
 
-If you want to use mish activation
+If you want to use mish activation (필수 아님)
 
 <pre>
 <code>
@@ -23,7 +22,7 @@ If you want to use mish activation
 </pre>
 
 
-If you want to use dwt down-sampling module
+If you want to use dwt down-sampling module (필수 아님)
 
 <pre>
 <code>
@@ -40,11 +39,24 @@ If you want to use dwt down-sampling module
 ## Preprocessing
 
 
+<pre>
+<code>
+yolo_preprocessing.py 파일을 실행시켜 yolo format에 맞게 데이터 다운 및 전처리 진행
 
-yolo_preprocessing.py 파일을 실행시켜 yolo format에 맞게 데이터 전처리 진행
-
+python yolo_preprocessing.py --data [data path]
+</code>
+</pre>
 
 ## YoloR 
+
+#### Pretrained weights for YoloR
+<pre>
+<code>
+cd yolor
+bash scripts/get_pretrain.sh
+</code>
+</pre>
+
 #### TRAIN
 
 <pre>
@@ -53,11 +65,11 @@ cd yolor
 
 - multi scale 적용 x
 
-python train.py --batch-size 16 --img-size 576 576 --data ../endoscopy.yaml --cfg cfg/yolor_w6.cfg --device 0 --sync-bn --name yolor_p6 --hyp hyp.scratch.1280.yaml --epochs 600 --weights weights path
+python train.py --batch-size 16 --img-size 576 576 --data ../endoscopy.yaml --cfg cfg/yolor_w6.cfg --device 0 --sync-bn --name yolor_w6 --hyp hyp.scratch.1280.yaml --epochs 600
 
 - multi scale 적용 o
 
-python train.py --batch-size 16 --img-size 576 576 --data ../endoscopy.yaml --cfg cfg/yolor_w6.cfg --device 0 --sync-bn --name yolor_p6 --hyp hyp.scratch.1280.yaml --epochs 600 --weights weights path --multi-scale
+python train.py --batch-size 16 --img-size 576 576 --data ../endoscopy.yaml --cfg cfg/yolor_w6.cfg --device 0 --sync-bn --name yolor_w6 --hyp hyp.scratch.1280.yaml --epochs 600 --multi-scale
 </code>
 </pre>
 
@@ -66,11 +78,11 @@ python train.py --batch-size 16 --img-size 576 576 --data ../endoscopy.yaml --cf
 <code>
 - tta 적용 x
 
-python detect.py --save-txt --source ../Data/DACON/yolo/images/test --weights weights path --cfg ./cfg/yolor_w6.cfg --device 0 --img-size 576 --output output path
+python detect.py --save-txt --source ../Data/DACON/yolo/images/test --weights [weights path] --cfg ./cfg/yolor_w6.cfg --device 0 --img-size 576 --output [output path]
 
 - tta 적용 o 
 
-python detect.py --save-txt --source ../Data/DACON/yolo/images/test --weights weights path --cfg ./cfg/yolor_w6.cfg --device 0 --img-size 576 --output output path --augment
+python detect.py --save-txt --source ../Data/DACON/yolo/images/test --weights [weights path] --cfg ./cfg/yolor_w6.cfg --device 0 --img-size 576 --output [output path] --augment
 </code>
 </pre>
 
@@ -85,11 +97,11 @@ cd yolov5
 
 - multi scale 적용 x
 
-python train.py --img 576 --batch 16 --epochs 350 --data ../endoscopy.yaml --weights weights path --project yolov5-endoscopy --save-period 1 --name endoscopy_1130 --device 0
+python train.py --img 576 --batch 16 --epochs 350 --data ../endoscopy.yaml --project yolov5-endoscopy --save-period 1 --name endoscopy_1130 --device 0
 
 - multi scale 적용 o
 
-python train.py --img 576 --batch 16 --epochs 350 --data ../endoscopy.yaml --weights weights path --project yolov5-endoscopy --save-period 1 --name endoscopy_1130 --device 0 --multi-scale
+python train.py --img 576 --batch 16 --epochs 350 --data ../endoscopy.yaml --project yolov5-endoscopy --save-period 1 --name endoscopy_1130 --device 0 --multi-scale
 </code>
 </pre>
 
@@ -98,20 +110,20 @@ python train.py --img 576 --batch 16 --epochs 350 --data ../endoscopy.yaml --wei
 <code>
 tta 적용 x
 
-python detect.py --source ../Data/DACON/yolo/images/test --save-txt --save-conf --weight weights path --imgsz 576 --device 0 
+python detect.py --source ../Data/DACON/yolo/images/test --save-txt --save-conf --weight [weights path] --imgsz 576 --device 0 
 
 tta 적용 o 
 
-python detect.py --source ../Data/DACON/yolo/images/test --save-txt --save-conf --weight weights path --imgsz 576 --device 0 --augment
+python detect.py --source ../Data/DACON/yolo/images/test --save-txt --save-conf --weight [weights path] --imgsz 576 --device 0 --augment
 </code>
 </pre>
 
 
-## Test map csv 파일 생성
+## Test mAP csv 파일 생성
 <pre>
 <code>
 cd ../
-python test_scores.py --data data path --save save file path
+python test_scores.py --data [data path] --save [save file path]
 
 예시) python test_scores.py --data ./inference/output32 --save final_submission_yolor_full.csv
 </code>
