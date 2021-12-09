@@ -13,7 +13,6 @@ tqdm>=4.41.0
 joblib
 jupyter
 ipywidgets
-openmim
 ensemble-boxes
 shapely
 
