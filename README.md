@@ -28,7 +28,7 @@ pip -r requirements_all_except_cbnet.txt
 ```
 conda create -n cbnet python=3.8
 ```
-pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
+#### pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 ```
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
 cd UniverseNet
