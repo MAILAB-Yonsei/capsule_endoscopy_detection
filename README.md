@@ -1,7 +1,7 @@
 # capsule_endoscopy_detection
 capsule_endoscopy_detection DACON challenge
 
-** 환경 세팅 ** 
+## 환경(env) 세팅
 * Ubuntu 18.04, Cuda 11.2
 * Ananconda - Python 3.8
 
