@@ -82,6 +82,7 @@ bash STEP3_inference_cbnet.sh
 * 아래의 weight 파일 링크에서 받은 mmdetection/ckpts 폴더를 mmdetection 폴더 아래에 위치시킨다.
 * 아래의 weight 파일 링크에서 받은 UniverseNet/ckpts 폴더를 UniverseNet 폴더 아래에 위치시킨다.
 * 아래의 weight 파일 링크에서 받은 YOLO/ckpts 폴더를 YOLO 폴더 아래에 위치시킨다.
+
 weight 파일 링크: https://drive.google.com/drive/folders/151KJC3FTUsK5mfx4TtNbhiFuuvLIeGz-?usp=sharing
 
 SETP4. 모든 모델에 대해 앙상블을 진행한다.
