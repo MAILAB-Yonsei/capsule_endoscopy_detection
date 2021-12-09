@@ -25,7 +25,7 @@ data_root = '../data_coco/' # dataset path
 ```
 bash dist_train.sh [config파일] [사용 gpu 갯수] --work-dir [저장폴더명]
 
-ex) bash mmdetection/dist_train.sh configs/detectors_cascade_rcnn_r50_mc/final.py 8 --work-dir result1
+ex) bash tools/dist_train.sh configs/retinanet_swin-l_ms/final.py 1 --work-dir ckpts/retinanet_swin-l_ms
 ```
 batch size 및 사용하는 gpu 갯수에 따라 learning rate를 수정해야함 (batch size = gpu 갯수 x sample per gpu > config에서 수정가능)
 
@@ -33,7 +33,7 @@ batch size 및 사용하는 gpu 갯수에 따라 learning rate를 수정해야�
 ```
 python predict.py --work-dir [5번에서 저장한 work-dir폴더]
 
-ex) python predict.py --work-dir result1
+ex) python predict/main.py --model atss_swin-l_ms
 ```
 predict를 진행하면 valid csv 파일과 mAP 결과, 그리고 test csv 파일이 만들어짐
 
