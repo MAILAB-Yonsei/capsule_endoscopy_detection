@@ -78,7 +78,7 @@ bash STEP2_train_model8_yolor.sh
 conda activate cbnet
 bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms.sh
 ```
-### STEP3. 모든 모델에 대해 Inference를 진행한다. (shell 하나당 20~30분 소요)
+### STEP3. 모든 모델에 대해 Inference를 진행한다. (모델 하나당 20~30분 소요)
 + cbnet만 제외한 나머지에 대한 Inference
 ```
 conda activate all_except_cbnet
