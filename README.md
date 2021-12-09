@@ -10,8 +10,7 @@ capsule_endoscopy_detection DACON challenge
 * Train set과 Validation set을 나누어 진행
 
 * 총 11개의 결과를 앙상블 
- * detectors_casacde_rcnn_resnet50_multiscale, retinanet_swin-l, retinanet_swin-l_multiscale,
-retinanet_swin-t, atss_swin-l_multiscale, faster_rcnn-swin-l_multiscale, yolor_tta_multiscale, yolov5x, yolov5x_tta, yolov5x_tta_multiscale
+  * detectors_casacde_rcnn_resnet50_multiscale, retinanet_swin-l, retinanet_swin-l_multiscale, retinanet_swin-t, atss_swin-l_multiscale, faster_rcnn-swin-l_multiscale, yolor_tta_multiscale, yolov5x, yolov5x_tta, yolov5x_tta_multiscale
 
 ## 환경(env) 세팅
 * Ubuntu 18.04, Cuda 11.2
