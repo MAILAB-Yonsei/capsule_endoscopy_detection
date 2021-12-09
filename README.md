@@ -35,9 +35,8 @@ pip install shapely
 ### STEP0. data root path 지정
 ```
 cd all_codes
-
 ```
-data_path.txt 파일에 data의 절대 경로를 명시 (ex. /mnt/data)
+data_path.txt 파일에 data의 절대 경로를 명시한다. (ex. /mnt/data)
 
 
 ### STEP1. data_preparation (약 20~30분 소요)
