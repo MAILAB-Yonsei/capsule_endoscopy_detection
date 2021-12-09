@@ -103,5 +103,5 @@ bash STEP4_ensemble.sh
 
 ## 주의사항
 #### 모두 순서에 맞게 코드를 구성해놓았기 때문에 하나의 코드를 2번 실행하는 등의 경우 진행에 어려움이 있을 수 있습니다. 참고해주세요.
-#### 현재 코드는 validation은 진행하지 않게 주석처리했습니다. 원하시면 주석처리를 풀고 val_answer.csv 파일의 경로를 설정해주시면 됩니다.
-(predict 파일 위치: /mmdetection/predict/main.py, /UniverseNet/predict/main.py)
+#### 현재 코드는 validation은 진행하지 않게 주석처리했습니다. 원하시면 predict.py에서 validation 주석처리를 풀고 val_answer.csv 파일의 경로를 설정해주시면 됩니다.
+(predict. 파일 위치: /mmdetection/predict/main.py, /UniverseNet/predict/main.py)
