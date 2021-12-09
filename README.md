@@ -81,6 +81,12 @@ conda activate cbnet
 bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms.sh
 ```
 ### STEP3. 모든 모델에 대해 Inference를 진행한다. (모델 하나당 20~30분 소요)
+* 학습을 건너뛰고 pretrained 모델에 대해 test를 하는 경우 아래 과정을 수행한 뒤 STEP3.의 명령어를 실행:
+  * 아래의 weight 파일 링크에서 받은 mmdetection/ckpts 폴더를 /mmdetection 폴더 아래에 위치시킨다.
+  * 아래의 weight 파일 링크에서 받은 UniverseNet/ckpts 폴더를 /UniverseNet 폴더 아래에 위치시킨다.
+  * 아래의 weight 파일 링크에서 받은 YOLO/ckpts 폴더를 /YOLO 폴더 아래에 위치시킨다.
+  * weight 파일 링크: https://drive.google.com/drive/folders/151KJC3FTUsK5mfx4TtNbhiFuuvLIeGz-?usp=sharing
+
 + cbnet만 제외한 나머지에 대한 Inference
 ```
 conda activate all_except_cbnet
@@ -91,11 +97,6 @@ bash STEP3_inference_all_except_cbnet.sh
 conda activate cbnet
 bash STEP3_inference_cbnet.sh
 ```
-* 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하는 경우 아래 과정을 수행한 뒤 STEP3.의 명령어를 실행:
-  * 아래의 weight 파일 링크에서 받은 mmdetection/ckpts 폴더를 /mmdetection 폴더 아래에 위치시킨다.
-  * 아래의 weight 파일 링크에서 받은 UniverseNet/ckpts 폴더를 /UniverseNet 폴더 아래에 위치시킨다.
-  * 아래의 weight 파일 링크에서 받은 YOLO/ckpts 폴더를 /YOLO 폴더 아래에 위치시킨다.
-  * weight 파일 링크: https://drive.google.com/drive/folders/151KJC3FTUsK5mfx4TtNbhiFuuvLIeGz-?usp=sharing
 ### SETP4. 모든 모델에 대해 앙상블을 진행한다.
 ```
 conda activate all_except_cbnet
