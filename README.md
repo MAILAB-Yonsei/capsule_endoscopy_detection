@@ -1,5 +1,4 @@
-# capsule_endoscopy_detection
-capsule_endoscopy_detection DACON challenge
+# capsule_endoscopy_detection (DACON Challenge)
 
 ### Overview
 
