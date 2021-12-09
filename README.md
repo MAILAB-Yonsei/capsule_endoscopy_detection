@@ -21,7 +21,9 @@ cd capsule_endoscopy_detection
 conda create -n all_except_cbnet python=3.8
 conda activate all_except_cbnet
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
+cd all_codes
 pip install -r requirements_all_except_cbnet.txt
+conda deactivate
 ```
 #### cbnet에 대한 env (cbnet)
 ```
@@ -30,7 +32,7 @@ conda activate cbnet
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
      (ex. pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html)
-cd UniverseNet
+cd ../UniverseNet
 pip install -r requirements/build.txt
 pip install -v -e .  # or "python setup.py develop"
 pip install instaboostfast
