@@ -34,12 +34,12 @@ pip install shapely
 ```
 cd all_codes
 ```
-STEP1. data_preparation (약 20~30분 소요)
+### STEP1. data_preparation (약 20~30분 소요)
 ```
 conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
 ```
-STEP2. 각 모델을 학습시킨다.
+### STEP2. 각 모델을 학습시킨다.
 #### cbnet을 제외한 나머지에 대한 Training
 ```
 conda activate all_except_cbnet
@@ -57,7 +57,7 @@ bash STEP2_train_model8_yolor.sh
 conda activate cbnet
 bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms.sh
 ```
-STEP3. 모든 모델에 대해 Inference를 진행한다. (shell 하나당 20~30분 소요)
+### STEP3. 모든 모델에 대해 Inference를 진행한다. (shell 하나당 20~30분 소요)
 #### cbnet을 제외한 나머지에 대한 Inference
 ```
 conda activate all_except_cbnet
@@ -73,8 +73,7 @@ bash STEP3_inference_cbnet.sh
 * 아래의 weight 파일 링크에서 받은 UniverseNet/ckpts 폴더를 UniverseNet 폴더 아래에 위치시킨다.
 * 아래의 weight 파일 링크에서 받은 YOLO/ckpts 폴더를 YOLO 폴더 아래에 위치시킨다.
 weight 파일 링크: https://drive.google.com/drive/folders/151KJC3FTUsK5mfx4TtNbhiFuuvLIeGz-?usp=sharing
-
-SETP4. 모든 모델에 대해 앙상블을 진행한다.
+### SETP4. 모든 모델에 대해 앙상블을 진행한다.
 ```
 conda activate all_except_cbnet.sh
 bash STEP4_ensemble.sh
