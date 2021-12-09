@@ -3,10 +3,13 @@ capsule_endoscopy_detection DACON challenge
 
 ### Overview
 
-* Yolov5, yolor, 
+* Yolov5, Yolor, mmdetection의 모델을 사용
 
-  * 모든 모델은 학습 시 Pretrained Weight을 yolov5 & mmdet github로부터 받아서 사용하였습니다.
+  * 모든 모델은 학습 시 Pretrained Weight을 yolov5, yolor, mmdetection 및 swin transformer github로부터 받아서 사용
 
+* Train set과 Validation set을 나누어 진행
+
+* 총 11개의 결과를 앙상블 
 
 ## 환경(env) 세팅
 * Ubuntu 18.04, Cuda 11.2
