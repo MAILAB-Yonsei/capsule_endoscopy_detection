@@ -9,8 +9,8 @@
   * Weighted boxes fusion (WBF) 방식으로 앙상블 진행 (Iou threshold = 0.4)
 ## 환경(env) 세팅
 + 실험 환경
- * Ubuntu 18.04, Cuda 11.3
- * Anaconda - Python 3.8
+- Ubuntu 18.04, Cuda 11.3
+- Anaconda - Python 3.8
 
 + git clone
 ```
