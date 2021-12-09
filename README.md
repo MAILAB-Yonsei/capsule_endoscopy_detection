@@ -3,6 +3,8 @@ capsule_endoscopy_detection DACON challenge
 
 ** 환경 세팅 ** 
 conda, CUDA 미리 세팅
+Ubuntu 16.04, Cuda 11.2
+
 
 <cbnet을 제외한 나머지에 대한 env>
 ```
