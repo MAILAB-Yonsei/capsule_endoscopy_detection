@@ -70,8 +70,8 @@ bash STEP2_train_model3_faster_rcnn_swin-l_ms.sh
 bash STEP2_train_model4_retinanet_swin-l.sh
 bash STEP2_train_model5_retinanet_swin-l_ms.sh
 bash STEP2_train_model6_retinanet_swin-t_ms.sh
-bash STEP2_train_model7_cbnet_faster_rcnn_swin-l_ms.sh
-bash STEP2_train_model8_yolor.sh
+bash STEP2_train_model7_yolor.sh
+bash STEP2_train_model8_yolo5x.sh
 ```
 + cbnet에 대한 Training
 ```
