@@ -61,7 +61,7 @@ bash STEP2_train_model6_retinanet_swin-t_ms.sh
 bash STEP2_train_model7_cbnet_faster_rcnn_swin-l_ms.sh
 bash STEP2_train_model8_yolor.sh
 ```
-#### cbnet에 대한 env
+#### cbnet에 대한 Training
 ```
 conda activate cbnet
 bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms.sh
