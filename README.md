@@ -1,14 +1,15 @@
 # capsule_endoscopy_detection (DACON Challenge)
 ### Overview
-* Yolov5, Yolor, mmdetection의 모델을 사용 (총 11개 모델 앙상블)
+* Yolov5, Yolor, mmdetection기반의 모델을 사용 (총 11개 모델 앙상블)
   * 모든 모델은 학습 시 Pretrained Weight을 yolov5, yolor, mmdetection 및 swin transformer github로부터 받아서 사용
   * 각 방식에 필요한 형태로 데이터의 format 변경
 * Train set과 Validation set을 나누어 진행
 * 총 11개의 결과를 앙상블 
   * detectors_casacde_rcnn_resnet50_multiscale, retinanet_swin-l, retinanet_swin-l_multiscale, retinanet_swin-t, atss_swin-l_multiscale, faster_rcnn-swin-l_multiscale, yolor_tta_multiscale, yolov5x, yolov5x_tta, yolov5x_tta_multiscale
   * Weighted boxes fusion (WBF) 방식으로 앙상블 진행 (Iou threshold = 0.4)
+  * 모델에 관한 보다 자세한 내용은 /all_steps 폴더 내에 STEP2로 시작하는 .sh 스크립트들에 적힌 주석을 참고해주세요!
 ## 환경(env) 세팅
-+ 실험 환경: Ubuntu 18.04, Cuda 11.3, Anaconda - Python 3.8
++ 실험 환경: Ubuntu 18.04, Cuda 11.3, Anaconda3, Python 3.8
 
 1. git clone ( + 폴더 권한 설정)
 ```
