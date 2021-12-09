@@ -16,7 +16,7 @@ python predict/main.py --model retinanet_swin-t_ms
 # --source는 yolo형 데이터의 test셋 경로입니다.
 cd ..
 cd YOLO/yolor
-python detect.py --save-txt --source ../../data_yolo/images/test --weights ckpts/yolor_epoch_400_tta.pt --cfg ./cfg/yolor_w6.cfg --device 0 --img-size 576 --output ../inference/yolor_epoch_400_tta --augment
+python detect.py --save-txt --source ../../data_yolo/images/test --weights ../ckpts/yolor/yolor_epoch_400_tta.pt --cfg ./cfg/yolor_w6.cfg --device 0 --img-size 576 --output ../inference/yolor_epoch_400_tta --augment
 cd ..
 # yolor의 output을 .csv 결과 파일로 변환하여, --save argument에 있는 경로에 저장합니다.
 python test_scores.py --data ./inference/yolor_epoch_400_tta --save yolor_epoch_400_tta.csv
@@ -26,9 +26,9 @@ python test_scores.py --data ./inference/yolor_epoch_400_tta --save yolor_epoch_
 # detect.py 를 실행하여, 각 이미지 별로 .txt 형태의 output을 저장합니다. (저장 경로는 ../runs/detect/exp{실험번호} 입니다.)
 # --source는 yolo형 데이터의 test셋 경로입니다. (저장 위치는 YOLO 폴더입니다.)
 cd yolov5
-python detect.py --source ../../data_yolo/images/test --save-txt --save-conf --weight ckpts/yolov5x_epoch_200.pt --imgsz 576 --device 0
-python detect.py --source ../../data_yolo/images/test --save-txt --save-conf --weight ckpts/yolov5x_epoch_250_tta.pt --imgsz 576 --device 0 --augment 
-python detect.py --source ../../data_yolo/images/test --save-txt --save-conf --weight ckpts/yolov5x_epoch_300_tta.pt --imgsz 576 --device 0 --augment
+python detect.py --source ../../data_yolo/images/test --save-txt --save-conf --weight ../ckpts/yolov5/yolov5x_epoch_200.pt --imgsz 576 --device 0
+python detect.py --source ../../data_yolo/images/test --save-txt --save-conf --weight ../ckpts/yolov5/yolov5x_epoch_250_tta.pt --imgsz 576 --device 0 --augment 
+python detect.py --source ../../data_yolo/images/test --save-txt --save-conf --weight ../ckpts/yolov5/yolov5x_epoch_300_tta.pt --imgsz 576 --device 0 --augment
 cd ..
 # yolor의 output을 .csv 결과 파일로 변환하여, --save argument에 있는 경로에 저장합니다. (저장 위치는 YOLO 폴더입니다.)
 python test_scores.py --data ./runs/detect/exp --save yolov5x_epoch_200.csv
