@@ -21,7 +21,6 @@ cd capsule_endoscopy_detection
 conda create -n all_except_cbnet python=3.8
 conda activate all_except_cbnet
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
-cd all_codes
 pip install -r requirements_all_except_cbnet.txt
 conda deactivate
 ```
