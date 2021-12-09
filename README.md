@@ -30,7 +30,7 @@ conda create -n cbnet python=3.8
 conda activate cbnet
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
-     (ex. pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html)
+     (ex. pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html)
 cd UniverseNet
 pip install -r requirements/build.txt
 pip install -v -e .  # or "python setup.py develop"
