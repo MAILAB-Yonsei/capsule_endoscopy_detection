@@ -10,6 +10,12 @@
 ## 환경(env) 세팅
 * Ubuntu 18.04, Cuda 11.2
 * Anaconda - Python 3.8
+
+#### git clone
+```
+git clone https://github.com/MAILAB-Yonsei/capsule_endoscopy_detection.git
+cd capsule_endoscopy_detection
+```
 #### cbnet을 제외한 나머지에 대한 env (all_except_cbnet)
 ```
 conda create -n all_except_cbnet python=3.8
