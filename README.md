@@ -10,13 +10,13 @@
 ## 환경(env) 세팅
 + 실험 환경: Ubuntu 18.04, Cuda 11.3, Anaconda - Python 3.8
 
-+ git clone ( + 폴더 권한 설정)
+1. git clone ( + 폴더 권한 설정)
 ```
 git clone https://github.com/MAILAB-Yonsei/capsule_endoscopy_detection.git
 chmod -R 777 capsule_endoscopy_detection
 cd capsule_endoscopy_detection
 ```
-+ cbnet만 제외한 나머지에 대한 env 생성 (all_except_cbnet)
+2. cbnet만 제외한 나머지에 대한 env 생성 (all_except_cbnet)
 ```
 conda create -n all_except_cbnet python=3.8
 conda activate all_except_cbnet
@@ -26,7 +26,7 @@ mim install mmdet
 pip install -r requirements_all_except_cbnet.txt
 conda deactivate
 ```
-+ cbnet에 대한 env 생성 (cbnet)
+3. cbnet에 대한 env 생성 (cbnet)
 ```
 conda create -n cbnet python=3.8
 conda activate cbnet
