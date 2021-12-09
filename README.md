@@ -29,30 +29,34 @@ pip install shapely
 ```
 
 ## main code 실행
-
 ```
 cd all_codes
 ```
 STEP1. data_preparation (약 20~30분 소요)
+```
 conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
-
+```
 STEP2. 각 모델을 학습시킨다.
+```
 bash STEP2로 시작하는 shell 실행 (model9. cbnet 제외하고)
 
 (model9. cbnet 에 대한 shell 실행)
 conda activate cbnet
 bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms
-
+```
 STEP3. 모든 모델에 대해 test를 진행한다. (shell 하나당 20~30분 소요)
+```
 conda activate all_except_cbnet
 bash STEP3_inference_all_except_cbnet.sh
 conda activate cbnet
 bash STEP3_inference_cbnet.sh
-
+```
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 mmdetection/ckpts 폴더를 mmdetection 폴더 아래에 위치시킨다.
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 UniverseNet/ckpts 폴더를 UniverseNet 폴더 아래에 위치시킨다.
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 YOLO/ckpts 폴더를 YOLO 폴더 아래에 위치시킨다.
 
 SETP4. 모든 모델에 대해 앙상블을 진행한다.
+```
 bash STEP4_ensemble.sh
+```
