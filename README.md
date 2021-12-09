@@ -31,9 +31,15 @@ pip install albumentations>=0.3.2 --no-binary imgaug,albumentations
 pip install shapely
 ```
 ## main code 실행
+
+### STEP0. data root path 지정
 ```
 cd all_codes
+
 ```
+data_path.txt 파일에 data의 절대 경로를 명시 (ex. /mnt/data)
+
+
 ### STEP1. data_preparation (약 20~30분 소요)
 ```
 conda activate all_except_cbnet
