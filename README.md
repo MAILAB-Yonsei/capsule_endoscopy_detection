@@ -11,12 +11,12 @@
 * Ubuntu 18.04, Cuda 11.2
 * Anaconda - Python 3.8
 
-#### git clone
++ git clone
 ```
 git clone https://github.com/MAILAB-Yonsei/capsule_endoscopy_detection.git
 cd capsule_endoscopy_detection
 ```
-#### cbnet을 제외한 나머지에 대한 env (all_except_cbnet)
++ cbnet만 제외한 나머지에 대한 env 생성 (all_except_cbnet)
 ```
 conda create -n all_except_cbnet python=3.8
 conda activate all_except_cbnet
@@ -24,7 +24,7 @@ pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.
 pip install -r requirements_all_except_cbnet.txt
 conda deactivate
 ```
-#### cbnet에 대한 env (cbnet)
++ cbnet에 대한 env 생성 (cbnet)
 ```
 conda create -n cbnet python=3.8
 conda activate cbnet
@@ -59,7 +59,7 @@ conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
 ```
 ### STEP2. 각 모델을 학습시킨다.
-+ cbnet을 제외한 나머지에 대한 Training
++ cbnet만 제외한 나머지에 대한 Training
 ```
 conda activate all_except_cbnet
 bash STEP2_train_model1_atss_swin-l_ms.sh
@@ -77,7 +77,7 @@ conda activate cbnet
 bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms.sh
 ```
 ### STEP3. 모든 모델에 대해 Inference를 진행한다. (shell 하나당 20~30분 소요)
-+ cbnet을 제외한 나머지에 대한 Inference
++ cbnet만 제외한 나머지에 대한 Inference
 ```
 conda activate all_except_cbnet
 bash STEP3_inference_all_except_cbnet.sh
