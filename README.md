@@ -62,7 +62,7 @@ data_path.txt 파일에 data의 절대 경로를 명시한다!!! (ex. /mnt/data)
 conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
 ```
-### STEP2. 각 모델을 학습시킨다.
+### STEP2. 각 모델을 학습시킨다. (pretrained 모델로 inference만 하고자 한다면 바로 STEP3로!)
 + cbnet만 제외한 나머지에 대한 Training
 ```
 conda activate all_except_cbnet
