@@ -13,6 +13,7 @@
 + git clone
 ```
 git clone https://github.com/MAILAB-Yonsei/capsule_endoscopy_detection.git
+chmod -R 777 capsule_endoscopy_detection
 cd capsule_endoscopy_detection
 ```
 + cbnet만 제외한 나머지에 대한 env 생성 (all_except_cbnet)
