@@ -18,13 +18,13 @@ capsule_endoscopy_detection DACON challenge
 * Ubuntu 18.04, Cuda 11.2
 * Ananconda - Python 3.8
 
-<cbnet을 제외한 나머지에 대한 env>
+#### cbnet을 제외한 나머지에 대한 env
 ```
 conda create -n all_except_cbnet python=3.8
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
 pip -r requirements_all_except_cbnet.txt
 ```
-<cbnet에 대한 env>
+#### cbnet에 대한 env
 ```
 conda create -n cbnet python=3.8
 ```
