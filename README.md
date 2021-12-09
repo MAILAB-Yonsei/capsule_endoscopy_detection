@@ -41,6 +41,7 @@ pip install git+https://github.com/cocodataset/panopticapi.git
 pip install git+https://github.com/lvis-dataset/lvis-api.git
 pip install albumentations>=0.3.2 --no-binary imgaug,albumentations
 pip install pandas
+pip install tqdm
 pip install shapely
 conda deactivate
 cd ..
