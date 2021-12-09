@@ -17,6 +17,7 @@
 * Ubuntu 18.04, Cuda 11.2
 * Ananconda - Python 3.8
 
+
 #### cbnet을 제외한 나머지에 대한 env
 ```
 conda create -n all_except_cbnet python=3.8
