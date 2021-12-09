@@ -21,7 +21,7 @@
 ```
 conda create -n all_except_cbnet python=3.8
 pytorch 설치 (ex. conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)
-pip -r requirements_all_except_cbnet.txt
+pip install -r requirements_all_except_cbnet.txt
 ```
 #### cbnet에 대한 env
 ```
