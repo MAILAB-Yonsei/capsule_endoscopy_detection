@@ -40,7 +40,7 @@ conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
 ```
 ### STEP2. 각 모델을 학습시킨다.
-- cbnet을 제외한 나머지에 대한 Training
++ cbnet을 제외한 나머지에 대한 Training
 ```
 conda activate all_except_cbnet
 bash STEP2_train_model1_atss_swin-l_ms.sh
@@ -52,18 +52,18 @@ bash STEP2_train_model6_retinanet_swin-t_ms.sh
 bash STEP2_train_model7_cbnet_faster_rcnn_swin-l_ms.sh
 bash STEP2_train_model8_yolor.sh
 ```
-- cbnet에 대한 Training
++ cbnet에 대한 Training
 ```
 conda activate cbnet
 bash STEP2_train_model9_cbnet_faster_rcnn_swin-l_ms.sh
 ```
 ### STEP3. 모든 모델에 대해 Inference를 진행한다. (shell 하나당 20~30분 소요)
-- cbnet을 제외한 나머지에 대한 Inference
++ cbnet을 제외한 나머지에 대한 Inference
 ```
 conda activate all_except_cbnet
 bash STEP3_inference_all_except_cbnet.sh
 ```
-- cbnet에 대한 Inference
++ cbnet에 대한 Inference
 ```
 conda activate cbnet
 bash STEP3_inference_cbnet.sh
