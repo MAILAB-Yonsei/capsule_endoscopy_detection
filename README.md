@@ -65,8 +65,7 @@ bash STEP3_inference_all_except_cbnet.sh
 conda activate cbnet
 bash STEP3_inference_cbnet.sh
 ```
-
-##### 모두 순서에 맞게 코드를 구성해놓았기 때문에 하나의 코드를 2번 실행하는 등의 경우 진행에 어려움이 있을 수 있습니다. 참고해주세요.
+#### 모두 순서에 맞게 코드를 구성해놓았기 때문에 하나의 코드를 2번 실행하는 등의 경우 진행에 어려움이 있을 수 있습니다. 참고해주세요.
 
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 mmdetection/ckpts 폴더를 mmdetection 폴더 아래에 위치시킨다.
 * 만약 학습을 건너뛰고 pretrained 모델에 대해 test를 하고 싶다면, 구글 드라이브 링크로 받은 UniverseNet/ckpts 폴더를 UniverseNet 폴더 아래에 위치시킨다.
