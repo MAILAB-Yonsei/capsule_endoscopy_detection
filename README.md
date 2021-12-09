@@ -53,7 +53,7 @@ gedit data_path.txt
 data_path.txt 파일에 data의 절대 경로를 명시한다!!! (ex. /mnt/data)
 
 
-### STEP1. data_preparation (약 20~30분 소요)
+### STEP1. data preparation (약 20~30분 소요)
 ```
 conda activate all_except_cbnet
 bash STEP1_data_preparation.sh
