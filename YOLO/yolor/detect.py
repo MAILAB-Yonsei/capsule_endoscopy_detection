@@ -181,7 +181,7 @@ if __name__ == '__main__':
     parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
     parser.add_argument('--augment', action='store_true', help='augmented inference')
     parser.add_argument('--update', action='store_true', help='update all models')
-    parser.add_argument('--cfg', type=str, default='/mnt/data2/yj/model/detection/yolor/cfg/yolor_p6.cfg', help='*.cfg path')
+    parser.add_argument('--cfg', type=str, default='./cfg/yolor_w6.cfg', help='*.cfg path')
     parser.add_argument('--names', type=str, default='data/coco.names', help='*.cfg path')
     opt = parser.parse_args()
     print(opt)
